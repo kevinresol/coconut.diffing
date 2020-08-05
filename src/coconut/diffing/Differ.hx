@@ -126,7 +126,7 @@ class Differ<Real:{}> {
         case RNative(oldAttr, r, oldRef):
           type.update(r, cast oldAttr, nuAttr);
           _render(nuChildren, r, parent, later);
-          callRef(ref, oldRef, r, later);
+          // callRef(ref, oldRef, r, later);
           r;
         default: throw 'assert';
       },
@@ -135,7 +135,7 @@ class Differ<Real:{}> {
           createWidget(type, ref, attr, parent, later);
         case RWidget(w, oldRef):
           type.update(attr, w);
-          callRef(ref, oldRef, w, later);
+          // callRef(ref, oldRef, w, later);
           w;
         default: throw 'assert';
       },
